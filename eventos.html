@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Próximos Eventos</h1>
+    </header>
+    <nav>
+        <a href="index.html">← Voltar para o Início</a>
+    </nav>
+    <main>
+        <h2>Tropicalia Runway</h2>
+        <p>O Carnaval sempre foi sobre liberdade, expressão e arte...e a nossa passarela já está pronta</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="headerfestapq.jpg" type="image/jpg">
+            <img src="headerfesta.jpg" alt="acervo de fotos antigas do Carnaval">
+        </picture>
+        <small>
+            <p>Fotos Retiradas do Acervo do Instituto Moreira Salles</p>
+        </small>
+        <p>Prepare o seu melhor visual de Carnaval.Sugestão: fantasias e/ou roupa de banho. Local a divulgar, compre seu ingresso e mande o comprovante para o mesmo número do pix (92)99385-3918.</p>
+        <img src="qrcode.jpeg" alt="qrcode do pix">
+        
+        <!-- Bloco do Pix Copia e Cola -->
+        <div class="pix-container">
+            <button onclick="copiarPix()" id="botao-pix">Copiar Código Pix</button>
+            <p id="mensagem-sucesso" style="display: none; color: green; font-size: 0.9em; margin-top: 5px;">
+                ✓ Código copiado! Cole no app do seu banco.
+            </p>
+        </div>
+
+        <!-- Script que faz a mágica de copiar -->
+        <script>
+            function copiarPix() {
+                const textoPix = "00020126480014br.gov.bcb.pix0114+55929938539180208Ingresso520400005303986540575.005802BR5925RAQUEL_MOTA_DE_SOUZA_BRON6011SANTA_MARIA62290525sCyK3OoD1Tr2u9JOs5g09Vs5G63040DF7";
+                navigator.clipboard.writeText(textoPix).then(() => {
+                    const mensagem = document.getElementById("mensagem-sucesso");
+                    const botao = document.getElementById("botao-pix");
+                    mensagem.style.display = "block";
+                    botao.innerText = "Código Copiado!";
+                    botao.style.background = "#28a745";
+                    
+                    // Reseta o botão após 3 segundos
+                    setTimeout(() => {
+                        mensagem.style.display = "none";
+                        botao.innerText = "Copiar Código Pix";
+                        botao.style.background = "#e783009c";
+                    }, 3000);
+                }).catch(err => {
+                    alert("Não foi possível copiar automaticamente. Copie manualmente: " + textoPix);
+                });
+            }
+        </script>
+        
+        <p>Após o envio do comprovante diga seu nome para colocarmos na lista</p>
+        
+        <div class="whatsapp-container">
+            <a href="https://wa.me/5592993853918" target="_blank" class="botao-whatsapp">
+                Envie Comprovante via WhatsApp
+            </a>
+        </div>
+
+        <!-- NOVO: Bloco de Sugestão de Músicas -->
+        <section class="form-musica">
+            <h3>Sugira uma Música para o Evento! 🎵</h3>
+            <form action="https://formspree.io/f/mljdankp" method="POST">
+                <div class="form-group">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                </div>
+                <div class="form-group">
+                    <label for="musica">Nome da Música e Cantor:</label>
+                    <input type="text" id="musica" name="musica" placeholder="Ex: Crazy in Love - Beyoncé" required>
+                </div>
+                <!-- Campo oculto para garantir que vá para o e-mail correto após a ativação -->
+                <input type="hidden" name="_replyto" value="rakelbronze@gmail.com">
+                <button type="submit" class="botao-enviar">Enviar Sugestão</button>
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>

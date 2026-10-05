@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+body {
+  background-color: #f7ede2; /* Um fundo creme confortável para leitura */
+  /* Cria linhas horizontais e verticais milimétricas e bem transparentes */
+  background-image: 
+    linear-gradient(rgba(231, 160, 146, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 160, 146, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px; /* Tamanho dos quadradinhos da textura */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    background-color: #e7a09260;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 20px 0; 
+}
+
+/* Criamos um container para segurar o conteúdo centralizado */
+main {
+  min-width: 300px;
+  max-width: 1000px;
+  margin: 30px auto; /* Adiciona uma margem em cima e embaixo */
+  padding: 20px;
+  background-color: #ffffff; /* Fundo branco para destacar o conteúdo */
+  border-radius: 12px; /* Bordas arredondadas modernas */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+main > img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+/* Estilo do parágrafo limpo de regras de largura */
+p {
+    text-align: center;
+    font-family: "Stardos Stencil", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.6; 
+}
+
+nav {
+    background-color: #e78300cb;
+    font-family: 'Stardos Stencil', system-ui;
+    font-weight: 700;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgb(202, 59, 23);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+picture img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto 0 auto;
+}
+.pix-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#botao-pix {
+    background-color: #e783009c; /* Mesma cor do seu nav */
+    font-family: "Stardos Stencil", system-ui;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#botao-pix:hover {
+    background-color: rgb(202, 59, 23);
+    color: white;
+    transform: scale(1.05); /* Dá um leve zoom ao passar o mouse */
+}
+.whatsapp-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.botao-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Verde oficial do WhatsApp */
+    color: white;
+    font-family: "Stardos Stencil", system-ui;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.botao-whatsapp:hover {
+    background-color: #128C7E; /* Verde mais escuro no hover */
+    color: white;
+    transform: scale(1.05);
+}
+
+        .form-musica {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .botao-enviar {
+            background-color: #e783009c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+        }
+        .botao-enviar:hover {
+            background-color: #d67400;
+        }
+
